@@ -1,8 +1,24 @@
-﻿class Program
+﻿using System;
+
+namespace CSHarpPractice{
+
+class Program
 {
   static void Main(string[] args)
   {
+      Barkeeper barkeeper = new Barkeeper(50);
+      Drink beer = new Drink(100, 5);
+      Human human = new Human("Robi", 18, true, 1000);
+
+      Console.WriteLine(human);
+      human.goPub();
+      human.drinking(barkeeper, beer);
+      Console.WriteLine(human);
+      Console.WriteLine(beer);
+
+
   }
+}
 }
 
 /*Kocsmaszimulátor part 1:

@@ -2,23 +2,24 @@ class Barkeeper
 {
   int money;
   static int usedGlass;
+  public int Money { get; set; }
 
-  public Barkeeper(int money)
-  {
+  public Barkeeper(int money){
     this.money = money;
   }
 
-  public void washUp()
-  {
-    if (usedGlass > 0)
-    {
+  public void washUp(){
+    if (usedGlass > 0){
       usedGlass--;
       System.Console.Write("He washed a glass");
     }
-    else
-    {
+    else{
       System.Console.Write("There is not dirty glass");
     }
+  }
+  public override string ToString()
+  {
+    return "Barkeeper: " + money;
   }
 }
 

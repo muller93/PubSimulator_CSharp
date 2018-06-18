@@ -1,43 +1,72 @@
+using System;
+
 class Human{
   String name;
   int age;
   int money;
   int drunkenness = 0;
-  boolean male;
-  boolean inPub = false;
+  Boolean male;
+  Boolean inPub;
 
-  public Human(String name, int age, boolean male, int money, int drunkenness, boolean inPub){
+  public Human(String name, int age, Boolean male, int money){
     this.name = name;
     this.age = age;
     this.male = male;
     this.money = money;
-    this.drunkenness = drunkenness;
-    this.inPub = inPub;
   }
+
+  public String Name { get; set; }
+  public int Age { get; set; }
+  public int Money { get; set; }
+  public int Drunkenness { get; set; }
+  public Boolean Male { get; set; }
+  //public Boolean inPub { get; set; }
 
   public void drinking(Barkeeper barkeeper){
     if(inPub == true){
       money--;
       drunkenness++;
-      barkeeper.money++;
+      barkeeper.Money++;
+      toMuchAlcohol();
     } else {
-      System.Console.Write("He isn't in pub.")
+      Console.WriteLine("He isn't in pub.");
     }
   }
 
   public void sleeping(){
     drunkenness = 0;
-    System.Console.Write("He is sleeping.")
+    Console.WriteLine("He is sleeping.");
   }
 
   public void goHome(){
     inPub = false;
-    System.Console.Write("He goes to home.")
+    Console.WriteLine("He goes to home.");
   }
 
   public void goPub(){
     inPub = true;
-    System.Console.Write("He goes to pub")
+    Console.WriteLine("He goes to pub");
+  }
+
+  public void drinking(Barkeeper barkeeper, Drink drink){
+    if(inPub == true){
+      Console.WriteLine(drink);
+      money = (money - drink.Price);
+      drunkenness += drink.AlcoholContent;
+      barkeeper.Money += drink.Price;
+      toMuchAlcohol();
+    } else {
+      Console.WriteLine("He isn't in pub.");
+    }
+  }
+  public void toMuchAlcohol(){
+    if(drunkenness > 39){
+      sleeping();
+    }
+  }
+  public override string ToString()
+  {
+    return "Human: " + name + money + age + drunkenness + inPub + male;
   }
 }
 

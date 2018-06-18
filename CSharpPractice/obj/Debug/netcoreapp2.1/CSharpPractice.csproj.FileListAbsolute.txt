@@ -1,0 +1,11 @@
+/home/muller/CSharpPractice/CSharpPractice/obj/Debug/netcoreapp2.1/CSharpPractice.csprojAssemblyReference.cache
+/home/muller/CSharpPractice/CSharpPractice/obj/Debug/netcoreapp2.1/CSharpPractice.csproj.CoreCompileInputs.cache
+/home/muller/CSharpPractice/CSharpPractice/obj/Debug/netcoreapp2.1/CSharpPractice.AssemblyInfoInputs.cache
+/home/muller/CSharpPractice/CSharpPractice/obj/Debug/netcoreapp2.1/CSharpPractice.AssemblyInfo.cs
+/home/muller/CSharpPractice/CSharpPractice/bin/Debug/netcoreapp2.1/CSharpPractice.deps.json
+/home/muller/CSharpPractice/CSharpPractice/bin/Debug/netcoreapp2.1/CSharpPractice.runtimeconfig.json
+/home/muller/CSharpPractice/CSharpPractice/bin/Debug/netcoreapp2.1/CSharpPractice.runtimeconfig.dev.json
+/home/muller/CSharpPractice/CSharpPractice/bin/Debug/netcoreapp2.1/CSharpPractice.dll
+/home/muller/CSharpPractice/CSharpPractice/bin/Debug/netcoreapp2.1/CSharpPractice.pdb
+/home/muller/CSharpPractice/CSharpPractice/obj/Debug/netcoreapp2.1/CSharpPractice.dll
+/home/muller/CSharpPractice/CSharpPractice/obj/Debug/netcoreapp2.1/CSharpPractice.pdb
