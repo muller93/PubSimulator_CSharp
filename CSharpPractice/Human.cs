@@ -22,7 +22,6 @@ class Human
   public int Money { get; set; }
   public int Drunkenness { get; set; }
   public Boolean Male { get; set; }
-  //public Boolean inPub { get; set; }
 
   public void drinking(Barkeeper barkeeper)
   {
@@ -57,23 +56,29 @@ class Human
     Console.WriteLine(name + " goes to pub");
   }
 
-  public void drinking(Barkeeper barkeeper, Drink drink){
-    if (inPub == true){
-      if (money >= drink.GetPrice()){
+  public void drinking(Barkeeper barkeeper, Drink drink)
+  {
+    if (inPub == true)
+    {
+      if (money >= drink.GetPrice())
+      {
         money = (money - drink.GetPrice());
         drunkenness += drink.GetAlcoholContent();
         barkeeper.SetMoney(barkeeper.GetMoney() + drink.GetPrice());
         toMuchAlcohol();
         Console.WriteLine(name + " drunk a " + drink.GetName());
-      }else {
-        Console.WriteLine(name + " hasn't enough money.");
-      } 
       }
-      else {
+      else
+      {
+        Console.WriteLine(name + " hasn't enough money.");
+      }
+    }
+    else
+    {
       Console.WriteLine(name + " isn't in pub.");
     }
   }
-  
+
   public void toMuchAlcohol()
   {
     if (drunkenness > 39)
@@ -87,18 +92,3 @@ class Human
     return "Human, name: " + name + ", money: " + money + ", age: " + age + ", drunkeness: " + drunkenness + '\n';
   }
 }
-
-
-/*Bvítsük ki a már létez Ember osztályt egy privát pénz , és részegség int, és egy kocsmában boolean változókkal.
- Legyen egy új konstruktor, ez
-fogadjon a már meglév paramétereken kívül egy pénz paramétert is, amit állítson be az Ember pénzének.
- A részegség 0, a kocsmában false
-legyen alapértelmezetten. Legyen az Embernek egy iszik(Kocsmáros kocsmaros) metódusa, ami egy Kocsmárost vár majd.
- Ha ezt
-meghívják, akkor ha az illet a kocsmában van, fogyjon 1 a pénzébl, njön 1-gyel a részegsége, generáljon 1 koszos poharat,
- és adjon 1 pénzt a
-kocsmárosnak, akit paraméterül kapott. Majd látjuk, hogy a poharat hova kell eltárolni, és mi a Kocsmáros.
- Ha nincs a kocsmában, akkor írjon ki
-egy üzenetet errl. Legyen egy alszik() metódusa is, ami nullázza a részegséget és kiírja, hogy elaludt, 
-egy hazamegy() metódusa, ami
-false-ra állítja a kocsmában változót, és egy jön() metódusa, ami true-ra. Ezekrl is történjen kiírás. */
