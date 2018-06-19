@@ -2,7 +2,12 @@ class Barkeeper
 {
   int money;
   static int usedGlass;
-  public int Money { get; set; }
+  public int GetMoney() {
+    return money;
+    }
+    public int SetMoney(int value) {
+    return money = value;
+    }
 
   public Barkeeper(int money){
     this.money = money;
@@ -19,7 +24,7 @@ class Barkeeper
   }
   public override string ToString()
   {
-    return "Barkeeper: " + money;
+    return "Barkeeper money: " + money;
   }
 }
 

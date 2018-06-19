@@ -7,12 +7,16 @@ class Drink
     this.price = price;
     this.alcoholContent = alcoholContent;
   }
-  public int Price { get; set; }
-  public int AlcoholContent { get; set; }
+  public int GetPrice(){
+    return price;
+  }
+  public int GetAlcoholContent() {
+    return alcoholContent;
+    }
 
   public override string ToString()
   {
-    return "Drink: " + price + alcoholContent;
+    return "Drink, price: " + price +", alcohol content: " + alcoholContent;
   }
 }
 

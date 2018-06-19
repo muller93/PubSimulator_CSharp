@@ -6,14 +6,23 @@ class Program
 {
   static void Main(string[] args)
   {
-      Barkeeper barkeeper = new Barkeeper(50);
-      Drink beer = new Drink(100, 5);
-      Human human = new Human("Robi", 18, true, 1000);
+      Barkeeper Igor = new Barkeeper(100);
+      Barkeeper Sergej = new Barkeeper(200);
 
-      Console.WriteLine(human);
-      human.goPub();
-      human.drinking(barkeeper, beer);
-      Console.WriteLine(human);
+      Drink beer = new Drink(100, 3);
+      Drink vodka = new Drink(300, 8);
+      Drink palinka = new Drink(400, 10);
+      Drink wine = new Drink(200, 5);
+      Drink absinthe = new Drink(500, 14);
+
+      Human frank = new Human("Frank", 25, true, 3000);
+      Human amanda = new Human("Amanda", 28, false, 2500);
+      Human john = new Human("Robi", 18, true, 1000);
+
+      Console.WriteLine(john);
+      john.goPub();
+      john.drinking(Igor, beer);
+      Console.WriteLine(john);
       Console.WriteLine(beer);
 
 

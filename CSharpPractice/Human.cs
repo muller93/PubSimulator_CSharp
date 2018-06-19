@@ -26,7 +26,7 @@ class Human{
     if(inPub == true){
       money--;
       drunkenness++;
-      barkeeper.Money++;
+      barkeeper.SetMoney((barkeeper.GetMoney() +1));
       toMuchAlcohol();
     } else {
       Console.WriteLine("He isn't in pub.");
@@ -50,10 +50,10 @@ class Human{
 
   public void drinking(Barkeeper barkeeper, Drink drink){
     if(inPub == true){
-      Console.WriteLine(drink);
-      money = (money - drink.Price);
-      drunkenness += drink.AlcoholContent;
-      barkeeper.Money += drink.Price;
+      Console.WriteLine(drink.GetPrice());
+      money = (money - drink.GetPrice());
+      drunkenness += drink.GetAlcoholContent();
+      barkeeper.SetMoney(barkeeper.GetMoney() + drink.GetPrice());
       toMuchAlcohol();
     } else {
       Console.WriteLine("He isn't in pub.");
@@ -66,8 +66,8 @@ class Human{
   }
   public override string ToString()
   {
-    return "Human: " + name + money + age + drunkenness + inPub + male;
-  }
+    return "Human, name: " + name +", money: " + money +", age: " + age +", drunkeness: "+ drunkenness;
+  } 
 }
 
 
